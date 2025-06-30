@@ -1,3 +1,5 @@
+using AdForm_API.AdFormDB;
+using AdForm_API.Services;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -21,6 +23,8 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(xmlPath);
 });
 
+builder.Services.AddDbContext<AdFormContext>();
+builder.Services.AddScoped<AdFormService, AdFormService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -15,6 +15,7 @@ A .NET API project with PostgreSQL and Docker for [Order Management API Exercise
 
 ## Tasks and time duration
 Database and project set up: 30 min.</br>
+Linq query creation and testing: 6 hours.</br>
 
 ### DB Scafold
 dotnet ef dbcontext scaffold "Server=localhost;Port=5432;UserId=postgres;Password=admin;Database=AdFormSQL;" Npgsql.EntityFrameworkCore.PostgreSQL -o AdFormDB
