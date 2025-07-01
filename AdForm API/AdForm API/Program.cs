@@ -1,7 +1,9 @@
 using AdForm_API.AdFormDB;
+using AdForm_API.Data;
 using AdForm_API.Services;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using Path = System.IO.Path;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,11 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddDbContext<AdFormContext>();
 builder.Services.AddScoped<AdFormService, AdFormService>();
+
+builder.Services.AddGraphQLServer()
+    .AddQueryType<Query>()
+    .AddMutationType<Query>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,5 +46,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGraphQL("/graphql");
 
 app.Run();

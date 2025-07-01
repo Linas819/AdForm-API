@@ -73,7 +73,7 @@ namespace AdForm_API.Controllers
                 Message = response.Message
             }));
         }
-        [HttpPost]
+        /*[HttpPost]
         [Route("product")]
         public IActionResult PostProduct(string name, decimal price)
         {
@@ -83,7 +83,7 @@ namespace AdForm_API.Controllers
                 Success = response.Success,
                 Message = response.Message
             }));
-        }
+        }*/
         [HttpPost]
         [Route("discount")]
         public IActionResult PostDiscount(int productId, int minimumQuantity, float percentage)

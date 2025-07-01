@@ -127,6 +127,18 @@ namespace AdForm_API.Services
         {
             // A seperate object where all of the info can be added and then sent back
             PostResponse response = new PostResponse();
+            if (name == "")
+            {
+                response.Success = false;
+                response.Message = "Product name required";
+                return response;
+            }
+            if (price <= 0)
+            {
+                response.Success = false;
+                response.Message = "Price cannot be lower, or at 0";
+                return response;
+            }
             Product product = new Product();
             product.Name = name;
             product.Price = price;
@@ -137,6 +149,11 @@ namespace AdForm_API.Services
         {
             // A seperate object where all of the info can be added and then sent back
             PostResponse response = new PostResponse();
+            if (minimumQuantity <= 0 || percentage <= 0)
+            {
+                response.Success = false;
+                response.Message = "Minimum Quantity and/or Percentage cannot be lower , or at 0";
+            }
             Discount discount = new Discount();
             discount.ProductId = productId;
             discount.Percentage = percentage;
