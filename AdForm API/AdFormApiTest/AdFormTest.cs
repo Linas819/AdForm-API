@@ -55,7 +55,7 @@ namespace AdFormApiTest
             Assert.True(result.Success);
         }
         [Fact]
-        public void GetOrdersNotFoundError() // Checks if Error message is correct
+        public void GetOrdersNoIdsError() // Checks erro messege when no Ids are provided
         {
             var mockOrderSet = CreateMockDbSet(orders);
             var mockProductSet = CreateMockDbSet(products);
@@ -67,6 +67,24 @@ namespace AdFormApiTest
             AdFormService service = new AdFormService(mockContext.Object);
 
             string[] orderIds = [];
+
+            GetOrdersResponse result = service.GetOrders(orderIds);
+
+            Assert.Equal("No order Ids found", result.Message);
+        }
+        [Fact]
+        public void GetOrdersNotFoundError() // Checks if Error message is correct
+        {
+            var mockOrderSet = CreateMockDbSet(orders);
+            var mockProductSet = CreateMockDbSet(products);
+
+            var mockContext = new Mock<AdFormContext>();
+            mockContext.Setup(c => c.Orders).Returns(mockOrderSet.Object);
+            mockContext.Setup(c => c.Products).Returns(mockProductSet.Object);
+
+            AdFormService service = new AdFormService(mockContext.Object);
+
+            string[] orderIds = ["ord"];
 
             GetOrdersResponse result = service.GetOrders(orderIds);
 
@@ -202,6 +220,23 @@ namespace AdFormApiTest
             PostResponse result = service.PostOrder(productIds, quantities, "ord3");
 
             Assert.True(result.Success);
+        }
+        [Fact]
+        public void PostOrderNoProductIdsError() // Check error if no product ids are provided
+        {
+            var mockOrderSet = CreateMockDbSet(orders);
+
+            var mockContext = new Mock<AdFormContext>();
+            mockContext.Setup(c => c.Orders).Returns(mockOrderSet.Object);
+
+            AdFormService service = new AdFormService(mockContext.Object);
+
+            List<int> productIds = new List<int> { };
+            List<int> quantities = new List<int> { 20, 30 };
+
+            PostResponse result = service.PostOrder(productIds, quantities, "ord3");
+
+            Assert.Equal("Product Ids required", result.Message);
         }
         [Fact]
         public void PostOrderErrorMessege() // Checks if error messege is recieved

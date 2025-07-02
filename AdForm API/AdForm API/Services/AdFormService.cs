@@ -28,6 +28,12 @@ namespace AdForm_API.Services
         {
             // A seperate object where all of the info can be added and then sent back
             GetOrdersResponse response = new GetOrdersResponse();
+            if (orderIds.Length == 0)
+            {
+                response.Success = false;
+                response.Message = "No order Ids found";
+                return response;
+            }
             response.Details = (from o in _AdformContext.Orders
                                 join p in _AdformContext.Products on o.ProductId equals p.ProductId
                                 where orderIds.Contains(o.OrderId)
@@ -111,6 +117,14 @@ namespace AdForm_API.Services
         {
             // A seperate object where all of the info can be added and then sent back
             PostResponse response = new PostResponse();
+            if (productIds.Count() == 0)
+            {
+                // Product Ids cannot be empty
+                response.Success = false;
+                response.Message = "Product Ids required";
+                Log.Error(response.Message); // Missing requirement sends an error message
+                return response;
+            }
             if (productIds.Count() != quantity.Count)
             {
                 // Each Product Id must have a quantity and a Quantity must have a Product Id
