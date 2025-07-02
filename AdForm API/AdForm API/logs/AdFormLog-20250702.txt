@@ -1,0 +1,350 @@
+2025-07-02 13:37:16.827 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:37:16.855 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:37:16.927 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:37:16.929 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:37:16.930 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:37:17.794 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:37:17.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 106.9216ms
+2025-07-02 13:37:17.915 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - null null
+2025-07-02 13:37:17.962 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:37:17.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:37:17.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 32.6181ms
+2025-07-02 13:37:18.003 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - 200 null text/html;charset=utf-8 88.2964ms
+2025-07-02 13:37:18.041 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.7937ms
+2025-07-02 13:37:18.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - null null
+2025-07-02 13:37:18.077 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:37:18.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - 499 665 image/png 11.6247ms
+2025-07-02 13:37:18.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:37:18.125 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.2348ms
+2025-07-02 13:37:43.010 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:37:43.016 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:37:43.030 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:37:43.939 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", CASE
+    WHEN o.quantity >= d.min_quantity THEN d.percentage
+    ELSE 0
+END AS "Discount", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+INNER JOIN discounts AS d ON o.product_id = d.product_id
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, d.percentage, p.price, d.min_quantity
+2025-07-02 13:37:43.960 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:37:43.973 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 939.7824ms
+2025-07-02 13:37:43.974 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:37:43.977 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 962.0461 ms
+2025-07-02 13:37:43.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 975.1466ms
+2025-07-02 13:38:44.544 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:38:44.572 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:38:44.646 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:38:44.647 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:38:44.648 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:38:45.422 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:38:45.506 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 93.6673ms
+2025-07-02 13:38:45.517 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - null null
+2025-07-02 13:38:45.550 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:38:45.552 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:38:45.577 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 24.6269ms
+2025-07-02 13:38:45.602 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.5558ms
+2025-07-02 13:38:45.610 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - 200 null text/html;charset=utf-8 92.6599ms
+2025-07-02 13:38:45.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - null null
+2025-07-02 13:38:45.659 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:38:45.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - 499 665 image/png 15.7369ms
+2025-07-02 13:38:45.706 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:38:45.715 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.7744ms
+2025-07-02 13:38:54.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:38:54.616 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:38:54.630 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:38:55.473 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, p.price
+2025-07-02 13:38:55.492 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:38:55.504 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 870.2001ms
+2025-07-02 13:38:55.505 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:38:55.507 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 891.8499 ms
+2025-07-02 13:38:55.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 903.2919ms
+2025-07-02 13:40:15.961 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:40:15.992 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:40:16.062 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:40:16.063 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:40:16.064 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:40:16.821 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:40:16.916 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 105.7909ms
+2025-07-02 13:40:16.954 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:40:16.954 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:40:16.979 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 24.8675ms
+2025-07-02 13:40:16.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.5372ms
+2025-07-02 13:40:17.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:40:17.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.6233ms
+2025-07-02 13:40:25.976 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:40:25.983 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:40:25.997 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:40:26.845 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", CASE
+    WHEN o.quantity >= d.min_quantity THEN d.percentage
+    ELSE 0
+END AS "Discount", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+INNER JOIN discounts AS d ON o.product_id = d.product_id
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, d.percentage, p.price, d.min_quantity
+2025-07-02 13:40:26.867 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:40:26.879 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 878.6432ms
+2025-07-02 13:40:26.880 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:40:26.882 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 900.4669 ms
+2025-07-02 13:40:26.889 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 913.1055ms
+2025-07-02 13:41:33.361 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:41:33.386 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:41:33.449 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:41:33.451 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:41:33.452 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:41:33.855 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:41:33.946 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 100.4332ms
+2025-07-02 13:41:33.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:41:33.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:41:34.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 19.387ms
+2025-07-02 13:41:34.022 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.7058ms
+2025-07-02 13:41:34.094 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:41:34.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.7438ms
+2025-07-02 13:41:46.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:41:46.362 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:41:46.377 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:41:47.237 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", CASE
+    WHEN o.quantity >= s.min_quantity THEN s.percentage
+    ELSE 0
+END AS "Discount", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+INNER JOIN (
+    SELECT d.min_quantity, d.percentage, d.product_id
+    FROM (
+        SELECT 1
+    ) AS e
+    LEFT JOIN discounts AS d ON TRUE
+) AS s ON o.product_id = s.product_id
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, s.percentage, p.price, s.min_quantity
+2025-07-02 13:41:47.258 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:41:47.270 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 890.5603ms
+2025-07-02 13:41:47.272 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:41:47.274 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 912.7809 ms
+2025-07-02 13:41:47.281 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 926.4422ms
+2025-07-02 13:43:48.718 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:43:48.743 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:43:48.802 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:43:48.802 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:43:48.803 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:43:49.246 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:43:49.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 95.2309ms
+2025-07-02 13:43:49.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - null null
+2025-07-02 13:43:49.372 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:43:49.373 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/swagger-ui.css - null null
+2025-07-02 13:43:49.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:43:49.390 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 17.741ms
+2025-07-02 13:43:49.404 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:43:49.407 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/swagger-ui.css - 499 154949 text/css 34.454ms
+2025-07-02 13:43:49.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.517ms
+2025-07-02 13:43:49.430 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - 200 null text/html;charset=utf-8 87.229ms
+2025-07-02 13:43:49.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - null null
+2025-07-02 13:43:49.458 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:43:49.459 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - 499 665 image/png 5.8867ms
+2025-07-02 13:43:49.514 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:43:49.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0624ms
+2025-07-02 13:44:00.017 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=org4 - null null
+2025-07-02 13:44:00.024 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:44:00.038 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:44:00.900 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", CASE
+    WHEN o.quantity >= s.min_quantity THEN s.percentage
+    ELSE 0
+END AS "Discount", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+INNER JOIN (
+    SELECT d.min_quantity, d.percentage, d.product_id
+    FROM (
+        SELECT 1
+    ) AS e
+    LEFT JOIN discounts AS d ON TRUE
+) AS s ON o.product_id = s.product_id
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, s.percentage, p.price, s.min_quantity
+2025-07-02 13:44:00.911 +03:00 [INF] Order Id: org4 not found
+2025-07-02 13:44:00.915 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:44:00.926 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 885.3409ms
+2025-07-02 13:44:00.927 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:44:00.929 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 906.9543 ms
+2025-07-02 13:44:00.936 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=org4 - 200 null application/json; charset=utf-8 919.2394ms
+2025-07-02 13:44:07.737 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:44:07.740 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:44:07.741 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:44:07.762 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", CASE
+    WHEN o.quantity >= s.min_quantity THEN s.percentage
+    ELSE 0
+END AS "Discount", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+INNER JOIN (
+    SELECT d.min_quantity, d.percentage, d.product_id
+    FROM (
+        SELECT 1
+    ) AS e
+    LEFT JOIN discounts AS d ON TRUE
+) AS s ON o.product_id = s.product_id
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, s.percentage, p.price, s.min_quantity
+2025-07-02 13:44:07.771 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:44:07.774 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 30.4219ms
+2025-07-02 13:44:07.775 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:44:07.776 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 35.4919 ms
+2025-07-02 13:44:07.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 40.4683ms
+2025-07-02 13:49:13.925 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:49:13.955 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:49:14.034 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:49:14.035 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:49:14.036 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:49:14.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:49:14.640 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 104.95ms
+2025-07-02 13:49:14.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - null null
+2025-07-02 13:49:14.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:49:14.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:49:14.699 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 15.8332ms
+2025-07-02 13:49:14.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.9728ms
+2025-07-02 13:49:14.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - 200 null text/html;charset=utf-8 79.9387ms
+2025-07-02 13:49:14.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - null null
+2025-07-02 13:49:14.769 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:49:14.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - 499 665 image/png 10.5727ms
+2025-07-02 13:49:14.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:49:14.807 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.3653ms
+2025-07-02 13:49:35.964 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:49:35.972 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:49:35.986 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:49:36.853 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", o.quantity AS "Quantity", CASE
+    WHEN o.quantity >= s.min_quantity THEN s.percentage
+    ELSE 0
+END AS "Discount", p.price::real AS "Price"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+CROSS JOIN (
+    SELECT d.min_quantity, d.percentage
+    FROM (
+        SELECT 1
+    ) AS e
+    LEFT JOIN discounts AS d ON TRUE
+) AS s
+WHERE o.order_id = @__orderId_0
+GROUP BY o.order_id, p.name, o.quantity, s.percentage, p.price, s.min_quantity
+2025-07-02 13:49:36.872 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:49:36.888 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 894.6396ms
+2025-07-02 13:49:36.889 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:49:36.891 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 920.0604 ms
+2025-07-02 13:49:36.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 933.3998ms
+2025-07-02 13:55:32.169 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:55:32.196 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:55:32.265 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:55:32.268 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:55:32.269 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:55:32.979 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:55:33.070 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 99.8296ms
+2025-07-02 13:55:33.078 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - null null
+2025-07-02 13:55:33.110 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:55:33.110 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/swagger-ui.css - null null
+2025-07-02 13:55:33.114 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:55:33.131 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 20.9645ms
+2025-07-02 13:55:33.139 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:55:33.141 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/swagger-ui.css - 499 154949 text/css 30.4783ms
+2025-07-02 13:55:33.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - 200 null text/html;charset=utf-8 78.5427ms
+2025-07-02 13:55:33.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.2093ms
+2025-07-02 13:55:33.192 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - null null
+2025-07-02 13:55:33.196 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:55:33.197 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - 499 665 image/png 4.7813ms
+2025-07-02 13:55:33.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:55:33.251 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.1589ms
+2025-07-02 13:55:46.370 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:55:46.376 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:55:46.390 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:55:47.291 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT s0.name AS "Name", s0.quantity AS "Quantity", CASE
+    WHEN s0.quantity >= s0."MinQuantity" THEN s0."Percentage0"
+    ELSE 0
+END AS "Discount", s0.price::real AS "Price"
+FROM (
+    SELECT o.order_id, o.quantity, p.name, p.price, CASE
+        WHEN s.discount_id IS NOT NULL THEN s.percentage
+        ELSE 0
+    END AS "Percentage0", CASE
+        WHEN s.discount_id IS NOT NULL THEN s.min_quantity
+        ELSE 0
+    END AS "MinQuantity"
+    FROM orders AS o
+    INNER JOIN products AS p ON o.product_id = p.product_id
+    CROSS JOIN (
+        SELECT d.discount_id, d.min_quantity, d.percentage
+        FROM (
+            SELECT 1
+        ) AS e
+        LEFT JOIN discounts AS d ON TRUE
+    ) AS s
+    WHERE o.order_id = @__orderId_0
+) AS s0
+GROUP BY s0.order_id, s0.name, s0.quantity, s0.price, s0."Percentage0", s0."MinQuantity"
+2025-07-02 13:55:47.312 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:55:47.324 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 929.9722ms
+2025-07-02 13:55:47.325 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:55:47.327 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 952.1599 ms
+2025-07-02 13:55:47.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 964.2839ms
+2025-07-02 13:57:05.566 +03:00 [INF] Now listening on: https://localhost:7070
+2025-07-02 13:57:05.597 +03:00 [INF] Now listening on: http://localhost:5048
+2025-07-02 13:57:05.694 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:57:05.695 +03:00 [INF] Hosting environment: Development
+2025-07-02 13:57:05.696 +03:00 [INF] Content root path: C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API
+2025-07-02 13:57:06.145 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger - null null
+2025-07-02 13:57:06.231 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger - 301 0 null 94.6853ms
+2025-07-02 13:57:06.242 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - null null
+2025-07-02 13:57:06.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/swagger-ui.css - null null
+2025-07-02 13:57:06.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-02 13:57:06.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - null null
+2025-07-02 13:57:06.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 26.9011ms
+2025-07-02 13:57:06.299 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:57:06.303 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/swagger-ui.css - 499 154949 text/css 32.2587ms
+2025-07-02 13:57:06.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.0495ms
+2025-07-02 13:57:06.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - 200 null text/html;charset=utf-8 86.737ms
+2025-07-02 13:57:06.347 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - null null
+2025-07-02 13:57:06.350 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:57:06.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/favicon-16x16.png - 499 665 image/png 4.4061ms
+2025-07-02 13:57:06.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - null null
+2025-07-02 13:57:06.392 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.0432ms
+2025-07-02 13:57:15.281 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:57:15.287 +03:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:57:15.301 +03:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:57:16.192 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT s.name AS "Name", s.quantity AS "Quantity", CASE
+    WHEN s.quantity >= s."MinQuantity" THEN s."Percentage0"
+    ELSE 0
+END AS "Discount", s.price::real AS "Price"
+FROM (
+    SELECT o.order_id, o.quantity, p.name, p.price, CASE
+        WHEN d.discount_id IS NOT NULL THEN d.percentage
+        ELSE 0
+    END AS "Percentage0", CASE
+        WHEN d.discount_id IS NOT NULL THEN d.min_quantity
+        ELSE 0
+    END AS "MinQuantity"
+    FROM orders AS o
+    INNER JOIN products AS p ON o.product_id = p.product_id
+    LEFT JOIN discounts AS d ON o.product_id = d.product_id
+    WHERE o.order_id = @__orderId_0
+) AS s
+GROUP BY s.order_id, s.name, s.quantity, s.price, s."Percentage0", s."MinQuantity"
+2025-07-02 13:57:16.212 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:57:16.224 +03:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 918.8514ms
+2025-07-02 13:57:16.225 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:57:16.227 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 941.2033 ms
+2025-07-02 13:57:16.234 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 953.1388ms

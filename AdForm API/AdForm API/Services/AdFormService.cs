@@ -82,9 +82,10 @@ namespace AdForm_API.Services
             OrderInvoiceResponse response = new OrderInvoiceResponse();
             response.Products = (from o in _AdformContext.Orders
                         join p in _AdformContext.Products on o.ProductId equals p.ProductId
-                        join d in _AdformContext.Discounts on o.ProductId equals d.ProductId
+                        join d in _AdformContext.Discounts on o.ProductId equals d.ProductId into discountGroup
+                        from d in discountGroup.DefaultIfEmpty()
                         where o.OrderId == orderId
-                        group new { o, p, d } by new { o.OrderId, p.Name, o.Quantity, d.Percentage, p.Price, d.MinQuantity } into g
+                        group o by new { o.OrderId, p.Name, o.Quantity, p.Price, Percentage = d != null ? d.Percentage : 0, MinQuantity = d != null ? d.MinQuantity : 0 } into g
                         select new OrderProduct {
                             Name = g.Key.Name,
                             Quantity = g.Key.Quantity,
@@ -121,6 +122,14 @@ namespace AdForm_API.Services
                 return response;
             }
             for(int i = 0; i<productIds.Count(); i++) {
+                if (productIds[i] <= 0 || quantity[i] <= 0)
+                {
+                    // Check if product id or quntity are not valid
+                    response.Success = false;
+                    response.Message = "ProductId and/or Qauntity cannot be lower or at 0";
+                    Log.Error(response.Message); // Missing requirement sends an error message
+                    return response;
+                }
                 Order order = new Order();
                 order.OrderId = orderId;
                 order.ProductId = productIds[i];
