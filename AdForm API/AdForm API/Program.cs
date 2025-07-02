@@ -1,6 +1,7 @@
 using AdForm_API.AdFormDB;
 using AdForm_API.Data;
 using AdForm_API.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -53,7 +54,9 @@ otel.WithMetrics(metrics => metrics
     .AddMeter("System.Net.NameResolution")
     .AddPrometheusExporter());
 
-builder.Services.AddDbContext<AdFormContext>();
+var connectionString = builder.Configuration.GetConnectionString("PostgreContainer") ??
+        throw new InvalidOperationException("Connection string 'PostgreContainer' not found");
+builder.Services.AddDbContext<AdFormContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped<AdFormService, AdFormService>();
 
 builder.Services.AddGraphQLServer()

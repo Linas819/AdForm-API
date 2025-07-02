@@ -1,0 +1,24 @@
+services:
+  adformapi:
+    image: ${DOCKER_REGISTRY-}adformapi
+    build:
+      context: .
+      dockerfile: AdForm API/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+  postgresdb:
+    image: postgres:latest
+    container_name: postgresdb_Api
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+        POSTGRES_DB: AdForm
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: admin
+    volumes:
+      - AdForm_API_PostgreSQL_volume:/var/lib/postgresql/data
+volumes:
+    AdForm_API_PostgreSQL_volume:
+        external: true

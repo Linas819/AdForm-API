@@ -348,3 +348,965 @@ GROUP BY s.order_id, s.name, s.quantity, s.price, s."Percentage0", s."MinQuantit
 2025-07-02 13:57:16.225 +03:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
 2025-07-02 13:57:16.227 +03:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 941.2033 ms
 2025-07-02 13:57:16.234 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7070/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 953.1388ms
+2025-07-02 13:39:17.491 +00:00 [INF] Now listening on: http://[::]:8080
+2025-07-02 13:39:17.537 +00:00 [INF] Now listening on: https://[::]:8081
+2025-07-02 13:39:17.541 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:39:17.542 +00:00 [INF] Hosting environment: Development
+2025-07-02 13:39:17.543 +00:00 [INF] Content root path: /app
+2025-07-02 13:39:18.014 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger - null null
+2025-07-02 13:39:18.117 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger - 301 0 null 115.0361ms
+2025-07-02 13:39:18.154 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/index.html - null null
+2025-07-02 13:39:18.242 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/index.html - 200 null text/html;charset=utf-8 88.9753ms
+2025-07-02 13:39:18.301 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/swagger-ui.css - null null
+2025-07-02 13:39:18.304 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/swagger-ui-bundle.js - null null
+2025-07-02 13:39:18.304 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/index.css - null null
+2025-07-02 13:39:18.305 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-02 13:39:18.326 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/index.js - null null
+2025-07-02 13:39:18.346 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/index.js - 200 null application/javascript;charset=utf-8 19.9155ms
+2025-07-02 13:39:18.362 +00:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-07-02 13:39:18.363 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/index.css - 200 202 text/css 59.8917ms
+2025-07-02 13:39:18.401 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:39:18.425 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-02 13:39:18.431 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 126.2747ms
+2025-07-02 13:39:18.431 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/swagger-ui.css - 200 154949 text/css 130.4689ms
+2025-07-02 13:39:18.493 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-02 13:39:18.494 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/swagger-ui-bundle.js - 200 1485241 text/javascript 190.4739ms
+2025-07-02 13:39:18.629 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/favicon-16x16.png - null null
+2025-07-02 13:39:18.631 +00:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:39:18.631 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/favicon-16x16.png - 200 665 image/png 3.6099ms
+2025-07-02 13:39:18.666 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/swagger/v1/swagger.json - null null
+2025-07-02 13:39:18.760 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.1035ms
+2025-07-02 13:39:23.992 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58360/AdForm - null null
+2025-07-02 13:39:23.999 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:39:24.018 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:39:25.155 +00:00 [ERR] An error occurred using the connection to database 'AdForm' on server 'tcp://localhost:5432'.
+2025-07-02 13:39:25.206 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AdForm_API.AdFormDB.AdFormContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5432
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5432
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2025-07-02 13:39:42.304 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 18237.0365ms
+2025-07-02 13:39:42.305 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:39:42.308 +00:00 [ERR] HTTP GET /AdForm responded 500 in 18265.3159 ms
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5432
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AdForm_API.Services.AdFormService.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Services\AdFormService.cs:line 33
+   at AdForm_API.Controllers.AdFormController.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Controllers\AdFormController.cs:line 20
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-02 13:39:42.326 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5432
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AdForm_API.Services.AdFormService.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Services\AdFormService.cs:line 33
+   at AdForm_API.Controllers.AdFormController.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Controllers\AdFormController.cs:line 20
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-02 13:39:42.359 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58360/AdForm - 500 null text/plain; charset=utf-8 18322.9884ms
+2025-07-02 13:43:20.236 +00:00 [INF] Now listening on: http://[::]:8080
+2025-07-02 13:43:20.279 +00:00 [INF] Now listening on: https://[::]:8081
+2025-07-02 13:43:20.283 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:43:20.284 +00:00 [INF] Hosting environment: Development
+2025-07-02 13:43:20.285 +00:00 [INF] Content root path: /app
+2025-07-02 13:43:20.658 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger - null null
+2025-07-02 13:43:20.760 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger - 301 0 null 114.2653ms
+2025-07-02 13:43:20.791 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/index.html - null null
+2025-07-02 13:43:20.877 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/index.html - 200 null text/html;charset=utf-8 87.1322ms
+2025-07-02 13:43:20.902 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/swagger-ui.css - null null
+2025-07-02 13:43:20.903 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/swagger-ui-bundle.js - null null
+2025-07-02 13:43:20.903 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/index.css - null null
+2025-07-02 13:43:20.914 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-02 13:43:20.923 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/index.js - null null
+2025-07-02 13:43:20.926 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/index.js - 200 null application/javascript;charset=utf-8 12.0871ms
+2025-07-02 13:43:20.957 +00:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-07-02 13:43:20.958 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/index.css - 200 202 text/css 54.3219ms
+2025-07-02 13:43:21.010 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:43:21.011 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-02 13:43:21.016 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 111.7895ms
+2025-07-02 13:43:21.016 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/swagger-ui.css - 200 154949 text/css 113.8326ms
+2025-07-02 13:43:21.087 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-02 13:43:21.088 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/swagger-ui-bundle.js - 200 1485241 text/javascript 184.694ms
+2025-07-02 13:43:21.225 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/favicon-16x16.png - null null
+2025-07-02 13:43:21.226 +00:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:43:21.227 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/favicon-16x16.png - 200 665 image/png 2.9825ms
+2025-07-02 13:43:21.271 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/swagger/v1/swagger.json - null null
+2025-07-02 13:43:21.363 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.8736ms
+2025-07-02 13:43:27.913 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58422/AdForm - null null
+2025-07-02 13:43:27.920 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:43:27.941 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:43:29.126 +00:00 [ERR] An error occurred using the connection to database 'AdForm' on server 'tcp://postgresdb_Api:5432'.
+2025-07-02 13:43:29.178 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AdForm_API.AdFormDB.AdFormContext'.
+Npgsql.PostgresException (0x80004005): 3D000: database "AdForm" does not exist
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+  Exception data:
+    Severity: FATAL
+    SqlState: 3D000
+    MessageText: database "AdForm" does not exist
+    File: postinit.c
+    Line: 1032
+    Routine: InitPostgres
+Npgsql.PostgresException (0x80004005): 3D000: database "AdForm" does not exist
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+  Exception data:
+    Severity: FATAL
+    SqlState: 3D000
+    MessageText: database "AdForm" does not exist
+    File: postinit.c
+    Line: 1032
+    Routine: InitPostgres
+2025-07-02 13:43:38.815 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 10870.1275ms
+2025-07-02 13:43:38.816 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:43:38.820 +00:00 [ERR] HTTP GET /AdForm responded 500 in 10900.8239 ms
+Npgsql.PostgresException (0x80004005): 3D000: database "AdForm" does not exist
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AdForm_API.Services.AdFormService.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Services\AdFormService.cs:line 33
+   at AdForm_API.Controllers.AdFormController.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Controllers\AdFormController.cs:line 20
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  Exception data:
+    Severity: FATAL
+    SqlState: 3D000
+    MessageText: database "AdForm" does not exist
+    File: postinit.c
+    Line: 1032
+    Routine: InitPostgres
+2025-07-02 13:43:38.842 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 3D000: database "AdForm" does not exist
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|214_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at AdForm_API.Services.AdFormService.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Services\AdFormService.cs:line 33
+   at AdForm_API.Controllers.AdFormController.GetOrders(String[] orderIds) in C:\Users\Linas\source\AdForm-API\AdForm API\AdForm API\Controllers\AdFormController.cs:line 20
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: FATAL
+    SqlState: 3D000
+    MessageText: database "AdForm" does not exist
+    File: postinit.c
+    Line: 1032
+    Routine: InitPostgres
+2025-07-02 13:43:38.872 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58422/AdForm - 500 null text/plain; charset=utf-8 10959.0461ms
+2025-07-02 13:51:58.787 +00:00 [INF] Now listening on: http://[::]:8080
+2025-07-02 13:51:58.829 +00:00 [INF] Now listening on: https://[::]:8081
+2025-07-02 13:51:58.832 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:51:58.833 +00:00 [INF] Hosting environment: Development
+2025-07-02 13:51:58.834 +00:00 [INF] Content root path: /app
+2025-07-02 13:51:59.234 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger - null null
+2025-07-02 13:51:59.328 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger - 301 0 null 110.2541ms
+2025-07-02 13:51:59.353 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/index.html - null null
+2025-07-02 13:51:59.440 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/index.html - 200 null text/html;charset=utf-8 87.239ms
+2025-07-02 13:51:59.464 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/swagger-ui.css - null null
+2025-07-02 13:51:59.465 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/index.css - null null
+2025-07-02 13:51:59.465 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/swagger-ui-bundle.js - null null
+2025-07-02 13:51:59.466 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-02 13:51:59.497 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/index.js - null null
+2025-07-02 13:51:59.509 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/index.js - 200 null application/javascript;charset=utf-8 22.3675ms
+2025-07-02 13:51:59.538 +00:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-07-02 13:51:59.539 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/index.css - 200 202 text/css 74.1366ms
+2025-07-02 13:51:59.600 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:51:59.605 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-02 13:51:59.610 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 144.6338ms
+2025-07-02 13:51:59.611 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/swagger-ui.css - 200 154949 text/css 146.3806ms
+2025-07-02 13:51:59.679 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-02 13:51:59.679 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/swagger-ui-bundle.js - 200 1485241 text/javascript 215.0793ms
+2025-07-02 13:51:59.819 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/favicon-16x16.png - null null
+2025-07-02 13:51:59.841 +00:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:51:59.842 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/favicon-16x16.png - 200 665 image/png 22.9342ms
+2025-07-02 13:51:59.856 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/swagger/v1/swagger.json - null null
+2025-07-02 13:51:59.942 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.8328ms
+2025-07-02 13:53:51.052 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/AdForm - null null
+2025-07-02 13:53:51.059 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:53:51.078 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:53:52.434 +00:00 [INF] Executed DbCommand (98ms) [Parameters=[@__orderIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT o.order_id AS "OrderId", COALESCE(sum(o.quantity::numeric * p.price), 0.0) AS "TotalPrice", count(*)::int AS "Products"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = ANY (@__orderIds_0) OR (o.order_id IS NULL AND array_position(@__orderIds_0, NULL) IS NOT NULL)
+GROUP BY o.order_id
+2025-07-02 13:53:52.450 +00:00 [INF] No orders found
+2025-07-02 13:53:52.455 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderDetails, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:53:52.485 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 1404.1348ms
+2025-07-02 13:53:52.486 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:53:52.489 +00:00 [INF] HTTP GET /AdForm responded 200 in 1431.1127 ms
+2025-07-02 13:53:52.497 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/AdForm - 200 null application/json; charset=utf-8 1445.5755ms
+2025-07-02 13:53:58.904 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58480/AdForm?orderIds=ord1 - null null
+2025-07-02 13:53:58.905 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:53:58.906 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:53:58.937 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__orderIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT o.order_id AS "OrderId", COALESCE(sum(o.quantity::numeric * p.price), 0.0) AS "TotalPrice", count(*)::int AS "Products"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = ANY (@__orderIds_0) OR (o.order_id IS NULL AND array_position(@__orderIds_0, NULL) IS NOT NULL)
+GROUP BY o.order_id
+2025-07-02 13:53:58.950 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderDetails, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:53:58.953 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 46.2826ms
+2025-07-02 13:53:58.954 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:53:58.954 +00:00 [INF] HTTP GET /AdForm responded 200 in 48.7469 ms
+2025-07-02 13:53:58.956 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58480/AdForm?orderIds=ord1 - 200 null application/json; charset=utf-8 51.9494ms
+2025-07-02 13:54:57.161 +00:00 [INF] Now listening on: http://[::]:8080
+2025-07-02 13:54:57.207 +00:00 [INF] Now listening on: https://[::]:8081
+2025-07-02 13:54:57.211 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 13:54:57.212 +00:00 [INF] Hosting environment: Development
+2025-07-02 13:54:57.212 +00:00 [INF] Content root path: /app
+2025-07-02 13:54:57.597 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger - null null
+2025-07-02 13:54:57.707 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger - 301 0 null 124.827ms
+2025-07-02 13:54:57.740 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/index.html - null null
+2025-07-02 13:54:57.832 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/index.html - 200 null text/html;charset=utf-8 92.1342ms
+2025-07-02 13:54:57.854 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/swagger-ui.css - null null
+2025-07-02 13:54:57.896 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/index.css - null null
+2025-07-02 13:54:57.908 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/swagger-ui-bundle.js - null null
+2025-07-02 13:54:57.908 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-02 13:54:57.920 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/index.js - null null
+2025-07-02 13:54:57.940 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/index.js - 200 null application/javascript;charset=utf-8 19.6876ms
+2025-07-02 13:54:57.972 +00:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-07-02 13:54:57.973 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/index.css - 200 202 text/css 97.215ms
+2025-07-02 13:54:58.016 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-02 13:54:58.016 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-02 13:54:58.047 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/swagger-ui.css - 200 154949 text/css 193.1769ms
+2025-07-02 13:54:58.047 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 139.4517ms
+2025-07-02 13:54:58.118 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-02 13:54:58.119 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/swagger-ui-bundle.js - 200 1485241 text/javascript 211.393ms
+2025-07-02 13:54:58.247 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/favicon-16x16.png - null null
+2025-07-02 13:54:58.248 +00:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-02 13:54:58.248 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/favicon-16x16.png - 200 665 image/png 2.6109ms
+2025-07-02 13:54:58.294 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/v1/swagger.json - null null
+2025-07-02 13:54:58.395 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.3328ms
+2025-07-02 13:55:18.828 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord1 - null null
+2025-07-02 13:55:18.834 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:55:18.854 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:55:20.195 +00:00 [INF] Executed DbCommand (104ms) [Parameters=[@__orderIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT o.order_id AS "OrderId", COALESCE(sum(o.quantity::numeric * p.price), 0.0) AS "TotalPrice", count(*)::int AS "Products"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = ANY (@__orderIds_0) OR (o.order_id IS NULL AND array_position(@__orderIds_0, NULL) IS NOT NULL)
+GROUP BY o.order_id
+2025-07-02 13:55:20.224 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderDetails, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:55:20.276 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 1419.5356ms
+2025-07-02 13:55:20.277 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:55:20.280 +00:00 [INF] HTTP GET /AdForm responded 200 in 1446.4431 ms
+2025-07-02 13:55:20.288 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord1 - 200 null application/json; charset=utf-8 1459.9525ms
+2025-07-02 13:55:26.710 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord1&orderIds=ord2 - null null
+2025-07-02 13:55:26.711 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:55:26.711 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:55:26.731 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__orderIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT o.order_id AS "OrderId", COALESCE(sum(o.quantity::numeric * p.price), 0.0) AS "TotalPrice", count(*)::int AS "Products"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = ANY (@__orderIds_0) OR (o.order_id IS NULL AND array_position(@__orderIds_0, NULL) IS NOT NULL)
+GROUP BY o.order_id
+2025-07-02 13:55:26.733 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderDetails, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:55:26.733 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 21.6107ms
+2025-07-02 13:55:26.734 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 13:55:26.734 +00:00 [INF] HTTP GET /AdForm responded 200 in 23.7375 ms
+2025-07-02 13:55:26.736 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord1&orderIds=ord2 - 200 null application/json; charset=utf-8 27.1571ms
+2025-07-02 13:55:39.382 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/products - null null
+2025-07-02 13:55:39.384 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetProducts (AdForm API)'
+2025-07-02 13:55:39.387 +00:00 [INF] Route matched with {action = "GetProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:55:39.465 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.product_id, p.name, p.price
+FROM products AS p
+2025-07-02 13:55:39.504 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.AdFormDB.Product, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:55:39.512 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetProducts (AdForm API) in 124.9337ms
+2025-07-02 13:55:39.513 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetProducts (AdForm API)'
+2025-07-02 13:55:39.513 +00:00 [INF] HTTP GET /AdForm/products responded 200 in 129.5219 ms
+2025-07-02 13:55:39.514 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/products - 200 null application/json; charset=utf-8 132.5412ms
+2025-07-02 13:55:46.258 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - null null
+2025-07-02 13:55:46.260 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 13:55:46.262 +00:00 [INF] Route matched with {action = "GetDiscountedProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDiscountedProducts() on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:55:46.285 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", d.percentage AS "DiscountPercentage", count(DISTINCT o.order_id)::int AS "OrderCount", COALESCE(sum(o.quantity), 0)::int AS "TotalQuantity", p.price AS "Price", COALESCE(sum(o.quantity), 0)::int::numeric * p.price AS "TotalPrice"
+FROM discounts AS d
+INNER JOIN products AS p ON d.product_id = p.product_id
+INNER JOIN orders AS o ON d.product_id = o.product_id
+WHERE d.min_quantity <= o.quantity
+GROUP BY p.product_id, p.name, p.price, d.percentage
+2025-07-02 13:55:46.288 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.DiscountedProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:55:46.294 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API) in 31.5015ms
+2025-07-02 13:55:46.294 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 13:55:46.295 +00:00 [INF] HTTP GET /AdForm/discountedProducts responded 200 in 34.8868 ms
+2025-07-02 13:55:46.296 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - 200 null application/json; charset=utf-8 38.0741ms
+2025-07-02 13:55:58.376 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 13:55:58.377 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:55:58.379 +00:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:55:58.420 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT s.name AS "Name", s.quantity AS "Quantity", CASE
+    WHEN s.quantity >= s."MinQuantity" THEN s."Percentage0"
+    ELSE 0
+END AS "Discount", s.price::real AS "Price"
+FROM (
+    SELECT o.order_id, o.quantity, p.name, p.price, CASE
+        WHEN d.discount_id IS NOT NULL THEN d.percentage
+        ELSE 0
+    END AS "Percentage0", CASE
+        WHEN d.discount_id IS NOT NULL THEN d.min_quantity
+        ELSE 0
+    END AS "MinQuantity"
+    FROM orders AS o
+    INNER JOIN products AS p ON o.product_id = p.product_id
+    LEFT JOIN discounts AS d ON o.product_id = d.product_id
+    WHERE o.order_id = @__orderId_0
+) AS s
+GROUP BY s.order_id, s.name, s.quantity, s.price, s."Percentage0", s."MinQuantity"
+2025-07-02 13:55:58.422 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:55:58.427 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 48.2504ms
+2025-07-02 13:55:58.428 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 13:55:58.428 +00:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 51.4500 ms
+2025-07-02 13:55:58.429 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 53.4753ms
+2025-07-02 13:56:31.871 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql - null null
+2025-07-02 13:56:31.890 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:31.918 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:31.918 +00:00 [INF] HTTP GET /graphql responded 301 in 27.9329 ms
+2025-07-02 13:56:31.919 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/graphql - 301 0 null 47.6921ms
+2025-07-02 13:56:31.927 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/ - null null
+2025-07-02 13:56:31.928 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.480 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.482 +00:00 [INF] HTTP GET  responded 200 in 554.2778 ms
+2025-07-02 13:56:32.483 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509 - 200 null text/html 556.0598ms
+2025-07-02 13:56:32.509 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/709.86959c9e.js - null null
+2025-07-02 13:56:32.508 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/polyfills.86959c9e.js - null null
+2025-07-02 13:56:32.509 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/936.86959c9e.js - null null
+2025-07-02 13:56:32.530 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/104.86959c9e.js - null null
+2025-07-02 13:56:32.556 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.556 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/402.86959c9e.js - null null
+2025-07-02 13:56:32.556 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.556 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.565 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.565 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/478.86959c9e.js - null null
+2025-07-02 13:56:32.581 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.591 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.611 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/773.86959c9e.js - null null
+2025-07-02 13:56:32.621 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/41.86959c9e.js - null null
+2025-07-02 13:56:32.622 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.622 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.633 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/main.86959c9e.js - null null
+2025-07-02 13:56:32.635 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:32.684 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/css/styles.76bb082d.css - null null
+2025-07-02 13:56:32.731 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.019 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.019 +00:00 [INF] HTTP GET /static/js/402.86959c9e.js responded 200 in 445.2103 ms
+2025-07-02 13:56:33.020 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/402.86959c9e.js - 200 null application/javascript 489.0264ms
+2025-07-02 13:56:33.057 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.058 +00:00 [INF] HTTP GET /static/js/478.86959c9e.js responded 200 in 466.8653 ms
+2025-07-02 13:56:33.058 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/478.86959c9e.js - 200 null application/javascript 493.2371ms
+2025-07-02 13:56:33.059 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.061 +00:00 [INF] HTTP GET /static/css/styles.76bb082d.css responded 200 in 350.4700 ms
+2025-07-02 13:56:33.062 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/css/styles.76bb082d.css - 200 null text/css 378.571ms
+2025-07-02 13:56:33.062 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.064 +00:00 [INF] HTTP GET /static/js/773.86959c9e.js responded 200 in 441.7363 ms
+2025-07-02 13:56:33.064 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.064 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/773.86959c9e.js - 200 null application/javascript 454.0815ms
+2025-07-02 13:56:33.066 +00:00 [INF] HTTP GET /static/js/41.86959c9e.js responded 200 in 443.9208 ms
+2025-07-02 13:56:33.068 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/41.86959c9e.js - 200 null application/javascript 446.2918ms
+2025-07-02 13:56:33.071 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.072 +00:00 [INF] HTTP GET /static/js/936.86959c9e.js responded 200 in 515.9354 ms
+2025-07-02 13:56:33.073 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/936.86959c9e.js - 200 null application/javascript 565.1254ms
+2025-07-02 13:56:33.078 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.078 +00:00 [INF] HTTP GET /static/js/709.86959c9e.js responded 200 in 547.9674 ms
+2025-07-02 13:56:33.079 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/709.86959c9e.js - 200 null application/javascript 571.0712ms
+2025-07-02 13:56:33.091 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.091 +00:00 [INF] HTTP GET /static/js/polyfills.86959c9e.js responded 200 in 560.8489 ms
+2025-07-02 13:56:33.092 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/polyfills.86959c9e.js - 200 null application/javascript 583.8369ms
+2025-07-02 13:56:33.110 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.110 +00:00 [INF] HTTP GET /static/js/main.86959c9e.js responded 200 in 475.3724 ms
+2025-07-02 13:56:33.111 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/main.86959c9e.js - 200 null application/javascript 478.2461ms
+2025-07-02 13:56:33.502 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.502 +00:00 [INF] HTTP GET /static/js/104.86959c9e.js responded 200 in 937.3418 ms
+2025-07-02 13:56:33.503 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/104.86959c9e.js - 200 null application/javascript 992.7454ms
+2025-07-02 13:56:33.859 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/apple-touch-icon.png - null null
+2025-07-02 13:56:33.859 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/favicon.svg - null null
+2025-07-02 13:56:33.861 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.861 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.870 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/670.c0fdf54a.chunk.js - null null
+2025-07-02 13:56:33.870 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/649.23881d6d.chunk.js - null null
+2025-07-02 13:56:33.892 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:33.893 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:34.036 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:34.036 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:34.036 +00:00 [INF] HTTP GET /favicon.svg responded 200 in 175.3118 ms
+2025-07-02 13:56:34.037 +00:00 [INF] HTTP GET /apple-touch-icon.png responded 200 in 175.8167 ms
+2025-07-02 13:56:34.037 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/favicon.svg - 200 null image/svg+xml 178.0634ms
+2025-07-02 13:56:34.037 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/apple-touch-icon.png - 200 9376 image/png 178.505ms
+2025-07-02 13:56:34.390 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:34.391 +00:00 [INF] HTTP GET /static/js/649.23881d6d.chunk.js responded 200 in 498.2011 ms
+2025-07-02 13:56:34.391 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/649.23881d6d.chunk.js - 200 null application/javascript 521.0906ms
+2025-07-02 13:56:34.923 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:34.923 +00:00 [INF] HTTP GET /static/js/670.c0fdf54a.chunk.js responded 200 in 1031.0358 ms
+2025-07-02 13:56:34.924 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/670.c0fdf54a.chunk.js - 200 null application/javascript 1054.4355ms
+2025-07-02 13:56:35.051 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/service-worker.js - null null
+2025-07-02 13:56:35.052 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.096 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/nitro-config.json - null null
+2025-07-02 13:56:35.097 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.101 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.101 +00:00 [INF] HTTP GET /graphql/nitro-config.json responded 200 in 4.6224 ms
+2025-07-02 13:56:35.102 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/graphql/nitro-config.json - 200 47 application/json; charset=utf-8 6.3599ms
+2025-07-02 13:56:35.275 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.275 +00:00 [INF] HTTP GET /service-worker.js responded 200 in 223.2092 ms
+2025-07-02 13:56:35.276 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/service-worker.js - 200 null application/javascript 225.7346ms
+2025-07-02 13:56:35.282 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/service-worker.js - null null
+2025-07-02 13:56:35.283 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.308 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.309 +00:00 [INF] HTTP GET /service-worker.js responded 200 in 25.5919 ms
+2025-07-02 13:56:35.309 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/service-worker.js - 200 null application/javascript 27.4133ms
+2025-07-02 13:56:35.339 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/apple-touch-icon.png - null null
+2025-07-02 13:56:35.340 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.361 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.361 +00:00 [INF] HTTP GET /apple-touch-icon.png responded 200 in 20.8523 ms
+2025-07-02 13:56:35.362 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/apple-touch-icon.png - 200 9376 image/png 22.4865ms
+2025-07-02 13:56:35.372 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/favicon.ico - null null
+2025-07-02 13:56:35.373 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.534 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.535 +00:00 [INF] HTTP GET /favicon.ico responded 200 in 161.9850 ms
+2025-07-02 13:56:35.535 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/favicon.ico - 200 null image/vnd.microsoft.icon 163.8917ms
+2025-07-02 13:56:35.545 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/favicon.svg - null null
+2025-07-02 13:56:35.546 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.566 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.567 +00:00 [INF] HTTP GET /favicon.svg responded 200 in 20.3646 ms
+2025-07-02 13:56:35.567 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/favicon.svg - 200 null image/svg+xml 22.3033ms
+2025-07-02 13:56:35.578 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/index.html - null null
+2025-07-02 13:56:35.579 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.719 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.720 +00:00 [INF] HTTP GET /index.html responded 200 in 141.2194 ms
+2025-07-02 13:56:35.720 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/index.html - 200 null text/html 143.4284ms
+2025-07-02 13:56:35.729 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/manifest.webmanifest - null null
+2025-07-02 13:56:35.731 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.871 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:35.871 +00:00 [INF] HTTP GET /manifest.webmanifest responded 200 in 140.5875 ms
+2025-07-02 13:56:35.872 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/manifest.webmanifest - 200 null application/manifest+json 142.9271ms
+2025-07-02 13:56:35.941 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/517.1ea7d79f.chunk.js - null null
+2025-07-02 13:56:35.943 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.355 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.355 +00:00 [INF] HTTP GET /static/js/517.1ea7d79f.chunk.js responded 200 in 412.5217 ms
+2025-07-02 13:56:36.356 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/517.1ea7d79f.chunk.js - 200 null application/javascript 415.4955ms
+2025-07-02 13:56:36.366 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/531.8d61401e.chunk.js - null null
+2025-07-02 13:56:36.367 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.515 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.516 +00:00 [INF] HTTP GET /static/js/531.8d61401e.chunk.js responded 200 in 148.3783 ms
+2025-07-02 13:56:36.516 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/531.8d61401e.chunk.js - 200 null application/javascript 150.8286ms
+2025-07-02 13:56:36.535 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/662.58fee080.chunk.js - null null
+2025-07-02 13:56:36.537 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.690 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.690 +00:00 [INF] HTTP GET /static/js/662.58fee080.chunk.js responded 200 in 153.9672 ms
+2025-07-02 13:56:36.691 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/662.58fee080.chunk.js - 200 null application/javascript 155.8223ms
+2025-07-02 13:56:36.741 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/712.af77a472.chunk.js - null null
+2025-07-02 13:56:36.743 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.898 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:36.899 +00:00 [INF] HTTP GET /static/js/712.af77a472.chunk.js responded 200 in 156.0118 ms
+2025-07-02 13:56:36.899 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/712.af77a472.chunk.js - 200 null application/javascript 157.9703ms
+2025-07-02 13:56:36.908 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/751.4972b222.chunk.js - null null
+2025-07-02 13:56:36.909 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:37.282 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:37.282 +00:00 [INF] HTTP GET /static/js/751.4972b222.chunk.js responded 200 in 372.8136 ms
+2025-07-02 13:56:37.283 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/751.4972b222.chunk.js - 200 null application/javascript 374.3681ms
+2025-07-02 13:56:37.303 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/81.3a5e0fef.chunk.js - null null
+2025-07-02 13:56:37.304 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:37.474 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:37.474 +00:00 [INF] HTTP GET /static/js/81.3a5e0fef.chunk.js responded 200 in 170.6712 ms
+2025-07-02 13:56:37.475 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/81.3a5e0fef.chunk.js - 200 null application/javascript 173.2215ms
+2025-07-02 13:56:37.628 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/830.bcdef144.chunk.js - null null
+2025-07-02 13:56:37.629 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:37.830 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:37.830 +00:00 [INF] HTTP GET /static/js/830.bcdef144.chunk.js responded 200 in 201.8182 ms
+2025-07-02 13:56:37.832 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/830.bcdef144.chunk.js - 200 null application/javascript 204.7006ms
+2025-07-02 13:56:37.848 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/editor.86959c9e.js - null null
+2025-07-02 13:56:37.850 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.037 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.038 +00:00 [INF] HTTP GET /static/js/editor.86959c9e.js responded 200 in 187.7317 ms
+2025-07-02 13:56:38.038 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/editor.86959c9e.js - 200 null application/javascript 190.0669ms
+2025-07-02 13:56:38.046 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/graphql-engine.a92cc8f7.chunk.js - null null
+2025-07-02 13:56:38.048 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.210 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/json.86959c9e.js - null null
+2025-07-02 13:56:38.211 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.217 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/graphql-engine.a92cc8f7.chunk.js - null null
+2025-07-02 13:56:38.220 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.222 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.223 +00:00 [INF] HTTP GET /static/js/graphql-engine.a92cc8f7.chunk.js responded 200 in 175.4782 ms
+2025-07-02 13:56:38.224 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/graphql-engine.a92cc8f7.chunk.js - 200 null application/javascript 178.2996ms
+2025-07-02 13:56:38.260 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/graphql-indexer.46a92321.chunk.js - null null
+2025-07-02 13:56:38.261 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.261 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.263 +00:00 [INF] HTTP GET /static/js/graphql-engine.a92cc8f7.chunk.js responded 200 in 42.5468 ms
+2025-07-02 13:56:38.263 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/graphql-engine.a92cc8f7.chunk.js - 200 null application/javascript 45.995ms
+2025-07-02 13:56:38.345 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/schema.graphql - null null
+2025-07-02 13:56:38.346 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.378 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/graphql.worker.86959c9e.js - null null
+2025-07-02 13:56:38.379 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.422 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.423 +00:00 [INF] HTTP GET /static/js/graphql-indexer.46a92321.chunk.js responded 200 in 161.5941 ms
+2025-07-02 13:56:38.423 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/graphql-indexer.46a92321.chunk.js - 200 null application/javascript 163.6129ms
+2025-07-02 13:56:38.450 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/graphql.worker.86959c9e.js - null null
+2025-07-02 13:56:38.451 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.617 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.618 +00:00 [INF] HTTP GET /static/js/json.86959c9e.js responded 200 in 406.7725 ms
+2025-07-02 13:56:38.618 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/json.86959c9e.js - 200 null application/javascript 409.1859ms
+2025-07-02 13:56:38.753 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.753 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.754 +00:00 [INF] HTTP GET /static/js/graphql.worker.86959c9e.js responded 200 in 303.3575 ms
+2025-07-02 13:56:38.754 +00:00 [INF] HTTP GET /static/js/graphql.worker.86959c9e.js responded 200 in 374.3206 ms
+2025-07-02 13:56:38.755 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/graphql.worker.86959c9e.js - 200 null application/javascript 304.861ms
+2025-07-02 13:56:38.755 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/graphql.worker.86959c9e.js - 200 null application/javascript 377.7285ms
+2025-07-02 13:56:38.798 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/session.1cdf1fd2.chunk.js - null null
+2025-07-02 13:56:38.799 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.977 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:38.978 +00:00 [INF] HTTP GET /static/js/session.1cdf1fd2.chunk.js responded 200 in 178.0944 ms
+2025-07-02 13:56:38.978 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/session.1cdf1fd2.chunk.js - 200 null application/javascript 180.5937ms
+2025-07-02 13:56:38.993 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/js/yaml.worker.86959c9e.js - null null
+2025-07-02 13:56:38.994 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.006 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.006 +00:00 [INF] HTTP GET /graphql/schema.graphql responded 200 in 659.8784 ms
+2025-07-02 13:56:39.007 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/graphql/schema.graphql - 200 269 application/graphql; charset=utf-8 662.1787ms
+2025-07-02 13:56:39.265 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.265 +00:00 [INF] HTTP GET /static/js/yaml.worker.86959c9e.js responded 200 in 271.4379 ms
+2025-07-02 13:56:39.266 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/js/yaml.worker.86959c9e.js - 200 null application/javascript 273.8795ms
+2025-07-02 13:56:39.277 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/media/FiraCode-Medium.1bc138a84f63b384c3f2.woff2 - null null
+2025-07-02 13:56:39.279 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.459 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.459 +00:00 [INF] HTTP GET /static/media/FiraCode-Medium.1bc138a84f63b384c3f2.woff2 responded 200 in 180.4676 ms
+2025-07-02 13:56:39.459 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/media/FiraCode-Medium.1bc138a84f63b384c3f2.woff2 - 200 102384 application/octet-stream 182.4965ms
+2025-07-02 13:56:39.468 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/static/media/codicon.184be8c3aa435ca6c3f5.ttf - null null
+2025-07-02 13:56:39.468 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.641 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:39.642 +00:00 [INF] HTTP GET /static/media/codicon.184be8c3aa435ca6c3f5.ttf responded 200 in 173.5383 ms
+2025-07-02 13:56:39.642 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/static/media/codicon.184be8c3aa435ca6c3f5.ttf - 200 77400 application/octet-stream 174.8247ms
+2025-07-02 13:56:40.282 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/nitro-config.json - null null
+2025-07-02 13:56:40.283 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:40.284 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:40.284 +00:00 [INF] HTTP GET /graphql/nitro-config.json responded 200 in 1.2059 ms
+2025-07-02 13:56:40.285 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/graphql/nitro-config.json - 200 47 application/json; charset=utf-8 3.3755ms
+2025-07-02 13:56:40.643 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/schema.graphql - null null
+2025-07-02 13:56:40.644 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:40.646 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:40.646 +00:00 [INF] HTTP GET /graphql/schema.graphql responded 200 in 1.6472 ms
+2025-07-02 13:56:40.647 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/graphql/schema.graphql - 200 269 application/graphql; charset=utf-8 4.1828ms
+2025-07-02 13:56:40.663 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/service-worker.js - null null
+2025-07-02 13:56:40.664 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:40.684 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:40.684 +00:00 [INF] HTTP GET /service-worker.js responded 304 in 19.9362 ms
+2025-07-02 13:56:40.687 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/service-worker.js - 304 null null 24.7787ms
+2025-07-02 13:56:41.677 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/service-worker.js - null null
+2025-07-02 13:56:41.678 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:41.698 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:41.698 +00:00 [INF] HTTP GET /service-worker.js responded 304 in 19.9071 ms
+2025-07-02 13:56:41.699 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/service-worker.js - 304 null null 21.9222ms
+2025-07-02 13:56:42.748 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/service-worker.js - null null
+2025-07-02 13:56:42.750 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:42.768 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:42.769 +00:00 [INF] HTTP GET /service-worker.js responded 304 in 18.8638 ms
+2025-07-02 13:56:42.769 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/service-worker.js - 304 null null 21.5912ms
+2025-07-02 13:56:50.465 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/graphql/service-worker.js - null null
+2025-07-02 13:56:50.465 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:50.486 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:56:50.486 +00:00 [INF] HTTP GET /service-worker.js responded 304 in 20.8723 ms
+2025-07-02 13:56:50.487 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/service-worker.js - 304 null null 22.7243ms
+2025-07-02 13:57:12.956 +00:00 [INF] Request starting HTTP/2 POST https://localhost:58509/graphql - application/json 93
+2025-07-02 13:57:12.958 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:57:13.042 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:57:13.051 +00:00 [INF] HTTP POST /graphql responded 400 in 93.1103 ms
+2025-07-02 13:57:13.060 +00:00 [INF] Request finished HTTP/2 POST https://localhost:58509/graphql - 400 null application/graphql-response+json; charset=utf-8 104.1221ms
+2025-07-02 13:57:34.302 +00:00 [INF] Request starting HTTP/2 POST https://localhost:58509/graphql - application/json 119
+2025-07-02 13:57:34.312 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:57:34.360 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:57:34.360 +00:00 [INF] HTTP POST /graphql responded 400 in 48.1130 ms
+2025-07-02 13:57:34.361 +00:00 [INF] Request finished HTTP/2 POST https://localhost:58509/graphql - 400 null application/graphql-response+json; charset=utf-8 58.5189ms
+2025-07-02 13:57:47.781 +00:00 [INF] Request starting HTTP/2 POST https://localhost:58509/graphql - application/json 123
+2025-07-02 13:57:47.782 +00:00 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:57:47.924 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?', @p1='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO products (name, price)
+VALUES (@p0, @p1)
+RETURNING product_id;
+2025-07-02 13:57:47.955 +00:00 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2025-07-02 13:57:47.956 +00:00 [INF] HTTP POST /graphql responded 200 in 173.6829 ms
+2025-07-02 13:57:47.956 +00:00 [INF] Request finished HTTP/2 POST https://localhost:58509/graphql - 200 null application/graphql-response+json; charset=utf-8 175.3626ms
+2025-07-02 13:58:02.981 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/products?productName=Olives - null null
+2025-07-02 13:58:02.982 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetProducts (AdForm API)'
+2025-07-02 13:58:02.983 +00:00 [INF] Route matched with {action = "GetProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 13:58:02.990 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p.product_id, p.name, p.price
+FROM products AS p
+WHERE p.name = @__productName_0
+2025-07-02 13:58:02.991 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.AdFormDB.Product, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 13:58:02.992 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetProducts (AdForm API) in 8.5825ms
+2025-07-02 13:58:03.003 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetProducts (AdForm API)'
+2025-07-02 13:58:03.012 +00:00 [INF] HTTP GET /AdForm/products responded 200 in 29.4567 ms
+2025-07-02 13:58:03.012 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/products?productName=Olives - 200 null application/json; charset=utf-8 31.4853ms
+2025-07-02 14:09:58.582 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/products - null null
+2025-07-02 14:09:58.627 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetProducts (AdForm API)'
+2025-07-02 14:09:58.628 +00:00 [INF] Route matched with {action = "GetProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:09:58.644 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.product_id, p.name, p.price
+FROM products AS p
+2025-07-02 14:09:58.645 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.AdFormDB.Product, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:09:58.646 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetProducts (AdForm API) in 17.5873ms
+2025-07-02 14:09:58.646 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetProducts (AdForm API)'
+2025-07-02 14:09:58.646 +00:00 [INF] HTTP GET /AdForm/products responded 200 in 19.4847 ms
+2025-07-02 14:09:58.647 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/products - 200 null application/json; charset=utf-8 86.6594ms
+2025-07-02 14:10:17.662 +00:00 [INF] Request starting HTTP/2 POST https://localhost:58509/AdForm/discount?productId=9&minimumQuantity=10&percentage=5 - null 0
+2025-07-02 14:10:17.663 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.PostDiscount (AdForm API)'
+2025-07-02 14:10:17.666 +00:00 [INF] Route matched with {action = "PostDiscount", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostDiscount(Int32, Int32, Single) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:10:17.698 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Single), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO discounts (min_quantity, percentage, product_id)
+VALUES (@p0, @p1, @p2)
+RETURNING discount_id;
+2025-07-02 14:10:17.702 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:10:17.705 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.PostDiscount (AdForm API) in 38.7412ms
+2025-07-02 14:10:17.705 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.PostDiscount (AdForm API)'
+2025-07-02 14:10:17.706 +00:00 [INF] HTTP POST /AdForm/discount responded 200 in 42.3999 ms
+2025-07-02 14:10:17.706 +00:00 [INF] Request finished HTTP/2 POST https://localhost:58509/AdForm/discount?productId=9&minimumQuantity=10&percentage=5 - 200 null application/json; charset=utf-8 44.5902ms
+2025-07-02 14:10:24.104 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - null null
+2025-07-02 14:10:24.107 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:10:24.107 +00:00 [INF] Route matched with {action = "GetDiscountedProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDiscountedProducts() on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:10:24.111 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", d.percentage AS "DiscountPercentage", count(DISTINCT o.order_id)::int AS "OrderCount", COALESCE(sum(o.quantity), 0)::int AS "TotalQuantity", p.price AS "Price", COALESCE(sum(o.quantity), 0)::int::numeric * p.price AS "TotalPrice"
+FROM discounts AS d
+INNER JOIN products AS p ON d.product_id = p.product_id
+INNER JOIN orders AS o ON d.product_id = o.product_id
+WHERE d.min_quantity <= o.quantity
+GROUP BY p.product_id, p.name, p.price, d.percentage
+2025-07-02 14:10:24.112 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.DiscountedProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:10:24.113 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API) in 5.0771ms
+2025-07-02 14:10:24.113 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:10:24.114 +00:00 [INF] HTTP GET /AdForm/discountedProducts responded 200 in 7.2061 ms
+2025-07-02 14:10:24.114 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - 200 null application/json; charset=utf-8 9.7598ms
+2025-07-02 14:10:34.150 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - null null
+2025-07-02 14:10:34.151 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:10:34.151 +00:00 [INF] Route matched with {action = "GetDiscountedProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDiscountedProducts() on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:10:34.155 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", d.percentage AS "DiscountPercentage", count(DISTINCT o.order_id)::int AS "OrderCount", COALESCE(sum(o.quantity), 0)::int AS "TotalQuantity", p.price AS "Price", COALESCE(sum(o.quantity), 0)::int::numeric * p.price AS "TotalPrice"
+FROM discounts AS d
+INNER JOIN products AS p ON d.product_id = p.product_id
+INNER JOIN orders AS o ON d.product_id = o.product_id
+WHERE d.min_quantity <= o.quantity
+GROUP BY p.product_id, p.name, p.price, d.percentage
+2025-07-02 14:10:34.156 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.DiscountedProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:10:34.156 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API) in 4.6382ms
+2025-07-02 14:10:34.157 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:10:34.157 +00:00 [INF] HTTP GET /AdForm/discountedProducts responded 200 in 6.4181 ms
+2025-07-02 14:10:34.158 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - 200 null application/json; charset=utf-8 9.1136ms
+2025-07-02 14:10:46.594 +00:00 [INF] Request starting HTTP/2 POST https://localhost:58509/AdForm/discount?productId=9&minimumQuantity=10&percentage=5 - null 0
+2025-07-02 14:10:46.595 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.PostDiscount (AdForm API)'
+2025-07-02 14:10:46.595 +00:00 [INF] Route matched with {action = "PostDiscount", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostDiscount(Int32, Int32, Single) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:10:46.605 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Single), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO discounts (min_quantity, percentage, product_id)
+VALUES (@p0, @p1, @p2)
+RETURNING discount_id;
+2025-07-02 14:10:46.606 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:10:46.607 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.PostDiscount (AdForm API) in 10.7135ms
+2025-07-02 14:10:46.607 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.PostDiscount (AdForm API)'
+2025-07-02 14:10:46.607 +00:00 [INF] HTTP POST /AdForm/discount responded 200 in 12.1384 ms
+2025-07-02 14:10:46.608 +00:00 [INF] Request finished HTTP/2 POST https://localhost:58509/AdForm/discount?productId=9&minimumQuantity=10&percentage=5 - 200 null application/json; charset=utf-8 14.3775ms
+2025-07-02 14:10:56.361 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - null null
+2025-07-02 14:10:56.363 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:10:56.363 +00:00 [INF] Route matched with {action = "GetDiscountedProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDiscountedProducts() on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:10:56.366 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", d.percentage AS "DiscountPercentage", count(DISTINCT o.order_id)::int AS "OrderCount", COALESCE(sum(o.quantity), 0)::int AS "TotalQuantity", p.price AS "Price", COALESCE(sum(o.quantity), 0)::int::numeric * p.price AS "TotalPrice"
+FROM discounts AS d
+INNER JOIN products AS p ON d.product_id = p.product_id
+INNER JOIN orders AS o ON d.product_id = o.product_id
+WHERE d.min_quantity <= o.quantity
+GROUP BY p.product_id, p.name, p.price, d.percentage
+2025-07-02 14:10:56.367 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.DiscountedProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:10:56.368 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API) in 3.9699ms
+2025-07-02 14:10:56.368 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:10:56.368 +00:00 [INF] HTTP GET /AdForm/discountedProducts responded 200 in 5.7041 ms
+2025-07-02 14:10:56.369 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - 200 null application/json; charset=utf-8 8.9558ms
+2025-07-02 14:11:38.009 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord5 - null null
+2025-07-02 14:11:38.009 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 14:11:38.020 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:11:38.031 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__orderIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT o.order_id AS "OrderId", COALESCE(sum(o.quantity::numeric * p.price), 0.0) AS "TotalPrice", count(*)::int AS "Products"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = ANY (@__orderIds_0) OR (o.order_id IS NULL AND array_position(@__orderIds_0, NULL) IS NOT NULL)
+GROUP BY o.order_id
+2025-07-02 14:11:38.033 +00:00 [INF] No orders found
+2025-07-02 14:11:38.036 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderDetails, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:11:38.036 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 8.5506ms
+2025-07-02 14:11:38.037 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 14:11:38.046 +00:00 [INF] HTTP GET /AdForm responded 200 in 36.5390 ms
+2025-07-02 14:11:38.055 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord5 - 200 null application/json; charset=utf-8 46.1544ms
+2025-07-02 14:11:42.291 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord4 - null null
+2025-07-02 14:11:42.293 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 14:11:42.293 +00:00 [INF] Route matched with {action = "GetOrders", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrders(System.String[]) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:11:42.296 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__orderIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT o.order_id AS "OrderId", COALESCE(sum(o.quantity::numeric * p.price), 0.0) AS "TotalPrice", count(*)::int AS "Products"
+FROM orders AS o
+INNER JOIN products AS p ON o.product_id = p.product_id
+WHERE o.order_id = ANY (@__orderIds_0) OR (o.order_id IS NULL AND array_position(@__orderIds_0, NULL) IS NOT NULL)
+GROUP BY o.order_id
+2025-07-02 14:11:42.297 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderDetails, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:11:42.298 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrders (AdForm API) in 4.2385ms
+2025-07-02 14:11:42.298 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrders (AdForm API)'
+2025-07-02 14:11:42.298 +00:00 [INF] HTTP GET /AdForm responded 200 in 5.8748 ms
+2025-07-02 14:11:42.299 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm?orderIds=ord4 - 200 null application/json; charset=utf-8 8.0267ms
+2025-07-02 14:14:35.780 +00:00 [INF] Now listening on: http://[::]:8080
+2025-07-02 14:14:35.821 +00:00 [INF] Now listening on: https://[::]:8081
+2025-07-02 14:14:35.824 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 14:14:35.826 +00:00 [INF] Hosting environment: Development
+2025-07-02 14:14:35.826 +00:00 [INF] Content root path: /app
+2025-07-02 14:14:36.198 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger - null null
+2025-07-02 14:14:36.290 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger - 301 0 null 103.818ms
+2025-07-02 14:14:36.511 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/swagger/v1/swagger.json - null null
+2025-07-02 14:14:36.617 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.5273ms
+2025-07-02 14:15:02.001 +00:00 [INF] Request starting HTTP/2 POST https://localhost:58509/AdForm?productIds=9&quantities=50&orderId=ord4 - null 0
+2025-07-02 14:15:02.008 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.PostOrder (AdForm API)'
+2025-07-02 14:15:02.027 +00:00 [INF] Route matched with {action = "PostOrder", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostOrder(System.Collections.Generic.List`1[System.Int32], System.Collections.Generic.List`1[System.Int32], System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:15:03.092 +00:00 [INF] Executed DbCommand (57ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO orders (order_id, product_id, quantity)
+VALUES (@p0, @p1, @p2)
+RETURNING id;
+2025-07-02 14:15:03.127 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:15:03.175 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.PostOrder (AdForm API) in 1145.4676ms
+2025-07-02 14:15:03.176 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.PostOrder (AdForm API)'
+2025-07-02 14:15:03.179 +00:00 [INF] HTTP POST /AdForm responded 200 in 1171.8801 ms
+2025-07-02 14:15:03.187 +00:00 [INF] Request finished HTTP/2 POST https://localhost:58509/AdForm?productIds=9&quantities=50&orderId=ord4 - 200 null application/json; charset=utf-8 1185.9818ms
+2025-07-02 14:15:13.833 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - null null
+2025-07-02 14:15:13.835 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:15:13.838 +00:00 [INF] Route matched with {action = "GetDiscountedProducts", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDiscountedProducts() on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:15:14.234 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p.name AS "Name", d.percentage AS "DiscountPercentage", count(DISTINCT o.order_id)::int AS "OrderCount", COALESCE(sum(o.quantity), 0)::int AS "TotalQuantity", p.price AS "Price", COALESCE(sum(o.quantity), 0)::int::numeric * p.price AS "TotalPrice"
+FROM discounts AS d
+INNER JOIN products AS p ON d.product_id = p.product_id
+INNER JOIN orders AS o ON d.product_id = o.product_id
+WHERE d.min_quantity <= o.quantity
+GROUP BY p.product_id, p.name, p.price, d.percentage
+2025-07-02 14:15:14.245 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.DiscountedProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:15:14.268 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API) in 340.4545ms
+2025-07-02 14:15:14.268 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetDiscountedProducts (AdForm API)'
+2025-07-02 14:15:14.269 +00:00 [INF] HTTP GET /AdForm/discountedProducts responded 200 in 344.8153 ms
+2025-07-02 14:15:14.270 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/discountedProducts - 200 null application/json; charset=utf-8 348.2203ms
+2025-07-02 14:15:27.942 +00:00 [INF] Request starting HTTP/2 GET https://localhost:58509/AdForm/orderInvoice?orderId=ord4 - null null
+2025-07-02 14:15:27.944 +00:00 [INF] Executing endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 14:15:27.946 +00:00 [INF] Route matched with {action = "GetOrderInvoice", controller = "AdForm"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrderInvoice(System.String) on controller AdForm_API.Controllers.AdFormController (AdForm API).
+2025-07-02 14:15:28.012 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT s.name AS "Name", s.quantity AS "Quantity", CASE
+    WHEN s.quantity >= s."MinQuantity" THEN s."Percentage0"
+    ELSE 0
+END AS "Discount", s.price::real AS "Price"
+FROM (
+    SELECT o.order_id, o.quantity, p.name, p.price, CASE
+        WHEN d.discount_id IS NOT NULL THEN d.percentage
+        ELSE 0
+    END AS "Percentage0", CASE
+        WHEN d.discount_id IS NOT NULL THEN d.min_quantity
+        ELSE 0
+    END AS "MinQuantity"
+    FROM orders AS o
+    INNER JOIN products AS p ON o.product_id = p.product_id
+    LEFT JOIN discounts AS d ON o.product_id = d.product_id
+    WHERE o.order_id = @__orderId_0
+) AS s
+GROUP BY s.order_id, s.name, s.quantity, s.price, s."Percentage0", s."MinQuantity"
+2025-07-02 14:15:28.014 +00:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[AdForm_API.Models.OrderProduct, AdForm API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 14:15:28.019 +00:00 [INF] Executed action AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API) in 72.2765ms
+2025-07-02 14:15:28.019 +00:00 [INF] Executed endpoint 'AdForm_API.Controllers.AdFormController.GetOrderInvoice (AdForm API)'
+2025-07-02 14:15:28.020 +00:00 [INF] HTTP GET /AdForm/orderInvoice responded 200 in 75.7878 ms
+2025-07-02 14:15:28.020 +00:00 [INF] Request finished HTTP/2 GET https://localhost:58509/AdForm/orderInvoice?orderId=ord4 - 200 null application/json; charset=utf-8 79.1223ms

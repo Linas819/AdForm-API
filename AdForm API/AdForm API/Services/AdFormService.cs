@@ -1,8 +1,6 @@
 ﻿using AdForm_API.AdFormDB;
 using AdForm_API.Models;
-using Microsoft.AspNetCore.Mvc;
 using Serilog;
-using System.Diagnostics;
 
 namespace AdForm_API.Services
 {
