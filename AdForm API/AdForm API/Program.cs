@@ -2,6 +2,7 @@ using AdForm_API.AdFormDB;
 using AdForm_API.Data;
 using AdForm_API.Services;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using System.Reflection;
 using Path = System.IO.Path;
 
@@ -25,6 +26,14 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(xmlPath);
 });
 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/AdFormLog-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
 builder.Services.AddDbContext<AdFormContext>();
 builder.Services.AddScoped<AdFormService, AdFormService>();
 
@@ -40,6 +49,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

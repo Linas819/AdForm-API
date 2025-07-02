@@ -1,6 +1,7 @@
 ﻿using AdForm_API.AdFormDB;
 using AdForm_API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using System.Diagnostics;
 
 namespace AdForm_API.Services
@@ -21,6 +22,7 @@ namespace AdForm_API.Services
             {
                 response.Success = false;
                 response.Message = "Product: " + productName + " not found";
+                Log.Information(response.Message); // Informing the user that no records were found
             }
             return response;
         }
@@ -43,6 +45,7 @@ namespace AdForm_API.Services
                 // If nothing was found
                 response.Success = false;
                 response.Message = "No orders found";
+                Log.Information(response.Message); // Informing the user that no records were found
             }
             return response;
         }
@@ -69,6 +72,7 @@ namespace AdForm_API.Services
                 // If nothing was found
                 response.Success = false;
                 response.Message = "No applicable discounts found";
+                Log.Information(response.Message); // Informing the user that no records were found
             }
             return response;
         }
@@ -92,6 +96,7 @@ namespace AdForm_API.Services
                 // If nothing was found
                 response.Success = false;
                 response.Message = "Order Id: " + orderId + " not found";
+                Log.Information(response.Message); // Informing the user that no records were found
                 return response;
             }
             // Total price (with discount) is only calculated after confirmation that an order was found
@@ -112,6 +117,7 @@ namespace AdForm_API.Services
                 // Each Product Id must have a quantity and a Quantity must have a Product Id
                 response.Success = false;
                 response.Message = "Product Ids and prices numbers do not match";
+                Log.Error(response.Message); // Missing requirement sends an error message
                 return response;
             }
             for(int i = 0; i<productIds.Count(); i++) {
@@ -131,12 +137,14 @@ namespace AdForm_API.Services
             {
                 response.Success = false;
                 response.Message = "Product name required";
+                Log.Error(response.Message); // Missing requirement sends an error message
                 return response;
             }
             if (price <= 0)
             {
                 response.Success = false;
                 response.Message = "Price cannot be lower, or at 0";
+                Log.Error(response.Message); // Missing requirement sends an error message
                 return response;
             }
             Product product = new Product();
@@ -153,6 +161,7 @@ namespace AdForm_API.Services
             {
                 response.Success = false;
                 response.Message = "Minimum Quantity and/or Percentage cannot be lower , or at 0";
+                Log.Error(response.Message); // Missing requirement sends an error message
             }
             Discount discount = new Discount();
             discount.ProductId = productId;
@@ -167,6 +176,8 @@ namespace AdForm_API.Services
             try {
                 _AdformContext.SaveChanges();
             } catch(Exception e){
+                Log.Information(e.Message); // Informing the user that something is wrong
+                Log.Error(e.InnerException.ToString()); // Explaining the error more deeply
                 response.Success = false;
                 response.Message = e.Message;
             }
