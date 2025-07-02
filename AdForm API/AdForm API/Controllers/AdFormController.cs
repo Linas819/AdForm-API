@@ -64,9 +64,9 @@ namespace AdForm_API.Controllers
             }));
         }
         [HttpPost]
-        public IActionResult PostOrder([FromQuery]List<int> productIds, [FromQuery]List<int> prices, string orderId)
+        public IActionResult PostOrder([FromQuery]List<int> productIds, [FromQuery]List<int> quantities, string orderId)
         {
-            PostResponse response = _adFormService.PostOrder(productIds, prices, orderId);
+            PostResponse response = _adFormService.PostOrder(productIds, quantities, orderId);
             return (Ok(new
             {
                 Success = response.Success,

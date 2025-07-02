@@ -2,6 +2,8 @@ using AdForm_API.AdFormDB;
 using AdForm_API.Data;
 using AdForm_API.Services;
 using Microsoft.OpenApi.Models;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
 using Serilog;
 using System.Reflection;
 using Path = System.IO.Path;
@@ -34,6 +36,23 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+var tracingOtlpEndpoint = builder.Configuration["OTLP_ENDPOINT_URL"];
+var otel = builder.Services.AddOpenTelemetry();
+
+otel.ConfigureResource(resource => resource
+    .AddService(serviceName: builder.Environment.ApplicationName));
+
+otel.WithMetrics(metrics => metrics
+    // Metrics provider from OpenTelemetry
+    .AddAspNetCoreInstrumentation()
+    // Metrics provides by ASP.NET Core in .NET 8
+    .AddMeter("Microsoft.AspNetCore.Hosting")
+    .AddMeter("Microsoft.AspNetCore.Server.Kestrel")
+    // Metrics provided by System.Net libraries
+    .AddMeter("System.Net.Http")
+    .AddMeter("System.Net.NameResolution")
+    .AddPrometheusExporter());
+
 builder.Services.AddDbContext<AdFormContext>();
 builder.Services.AddScoped<AdFormService, AdFormService>();
 
@@ -49,6 +68,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.MapPrometheusScrapingEndpoint();
 
 app.UseSerilogRequestLogging();
 
